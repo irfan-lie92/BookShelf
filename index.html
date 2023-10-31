@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="Author" content="Irfan Ali">
+	<meta property="og:image" content="http://irfan.desapasayangan.my.id/images/irfan.png">
+	<meta property="og:image:width" content="640">
+	<meta property="og:image:height" content="480">
+    <meta name="author-link" content="https://irfan.desapasayangan.my.id">
+    <link rel="stylesheet" href="style.css">
+    <title>Rak Bukuku</title>
+	<link rel="shortcut icon" type="image/x-icon" href="images/buku-lebih.svg">
+</head>
+<body>
+    <header id="main-header">
+        <nav class="container">
+            <div id="logo">
+                <img src="images/buku.svg" alt="">
+                <h1>Rak Bukuku</h1>
+            </div>
+            <ul>
+                <li id="daftar-buku" class="selected-page">Daftar Bukuku</li>
+                <li id="sudah-dibaca" class="">Sudah diBaca</li>
+                <li id="belum-belum" class="">Belum diBaca</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+    <input type="checkbox" id="darkSwitch">
+        <div class="container">
+            <button id="add-btn" class="btn btn-primary">
+               <img src="images/tambah.png" alt="tambah">
+                Tambah Buku
+            </button>
+            <div id="books-wrapper">
+            </div>
+        </div>
+    </main>
+
+    <section class="form-bg" style="display:none;">
+
+        <form id="add-form" class="form" action="" style="display: none;">
+            <div class="icon-btn close-btn">
+                <img src="images/keluar.svg" alt="keluar">
+            </div>
+            <div class="form-title">
+                <h2>Tambah Buku Baru</h2>
+            </div>
+
+            <div class="input-div">
+                <input type="text" name="" id="input-judul" placeholder="Judul" required>
+            </div>
+            <div class="input-div">
+                <input type="text" id="input-pengarang" placeholder="Pengarang" required>
+            </div>
+            <div class="input-div">
+                <input type="number" min="2000" id="input-tahun" placeholder="Tahun" required>
+            </div>
+            <div class="input-div checkbox-div">
+                <label for="input-baca">Sudah Selesai dibaca?</label>
+                <input type="checkbox" id="input-baca">
+            </div>
+            <button id="submit-book" class="btn btn-primary form-btn">
+				<img src="images/tambah.png" alt="tambah">
+				Tambah Ke Rak
+			</button>
+        </form>
+
+        <form id="edit-form" class="form" action="" style="display: none;">
+            <div class="icon-btn close-btn">
+                <img src="images/keluar.svg" alt="keluar">
+            </div>
+            <div class="form-title">
+                <h2>Sunting Buku</h2>
+            </div>
+            <input type="hidden" id="index-input" value="">
+            <div class="input-div">
+                <input type="text" name="" id="input-judul" placeholder="Judul" required>
+            </div>
+            <div class="input-div">
+                <input type="text" id="input-pengarang" placeholder="Pengarang" required>
+            </div>
+            <div class="input-div">
+                <input type="number" min="1" id="input-tahun" placeholder="Tahun" required>
+            </div>
+            <div class="input-div checkbox-div">
+                <label for="input-baca">Sudah Selesai dibaca?</label>
+                <input type="checkbox" id="input-baca">
+            </div>
+            <button id="update-book" class="btn btn-primary form-btn">Perbaharui Buku</button>
+        </form>
+
+        <form id="remove-form" class="form" action="" style="display: none;">
+            <div class="icon-btn close-btn">
+                <img src="images/keluar.svg" alt="keluar">
+            </div>
+            <div class="form-title">
+                <h2>Apakah Kamu yakin menghapus buku ini?</h2>
+            </div>
+            <input type="hidden" id="index-input" value="">
+            <button id="remove-book" class="btn btn-danger form-btn">Hapus Buku</button>
+        </form>
+    </section>
+
+    <footer id="main-footer">
+        <p>&copy; https://irfanali.my.id.2022 - dibuat oleh <a href="https://irfanali.my.id/">Irfan Ali</a></p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
