@@ -1,7 +1,7 @@
 <<--- catatan: --->
-1. Task Dicoding - Aplikasi Pengelolaan Data Menggunakan DOM dan Web Storage
+1. Aplikasi Pengelolaan Data Menggunakan DOM dan Web Storage
 
-Ini adalah project submission aplikasi pengelolaan data menggunakan [DOM] Dicoding Academy 2022.
+Ini adalah project aplikasi pengelolaan data menggunakan [DOM]
 
 2. Fitur
 
