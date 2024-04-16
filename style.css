@@ -346,7 +346,6 @@ h1, h2, h3, h4, h5, h6{
 #darkSwitch{
     position: fixed;
     bottom: 40px;
-    center: 20px;
     appearance: none;
     -webkit-appearance : none;
     -moz-appearance : none;
@@ -386,61 +385,74 @@ h1, h2, h3, h4, h5, h6{
     background: rgb(12, 177, 81);
 }
 
+.search-box {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: calc(100% - 20px);
+    box-sizing: border-box;
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-box:focus {
+    border-color: var(--primary);
+}
+
 @media (max-width: 720px){
 
     .container, .form{
-        width: 80%;
+        width: 90%;
     }
-    
-    #main-header{
-        padding-top: 10px;
-    }
-    
-    #main-header > nav{ 
-        display: flex;
-        justify-content: center;
-        align-content: center;
+
+    #main-header > nav {
         flex-direction: column;
-    }
-    
-    #logo{
-        display: flex;
         align-items: center;
-        justify-content: center;
+    }
 
-        margin: 10px;
+    #main-header ul {
+        flex-direction: column;
+        align-items: center;
     }
-    
-    #logo img{
-        width: 34px;
-        height: 34px;
+
+    #main-header ul > li {
+        margin: 10px 0;
     }
-    
-    #logo h1{
-        font-size: 32px;
-    }
-    
-    #main-header > nav > ul{
-        display: flex;
-        justify-content: center;
-    }
-    
-    #main-header ul > li{
-        margin: 0px;
-        padding: 10px 0px;
+
+    .search-box {
         width: 100%;
+        margin: 20px 0;
     }
+}
 
-    #add-btn{
-        width: 100%;
-        justify-content: center;
-    }
+.btn {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--light);
+    text-align: center;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-    .book-item{
-        width: 100%;
+.btn:hover {
+    background-color: darken(var(--primary), 10%);
+}
 
-        max-width: 100%;
-        min-height: 0;
-        margin-right: 0;
-    }
+/* Penyesuaian untuk tombol dan form */
+.form input[type="text"], .form input[type="number"], .form input[type="checkbox"] {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--secondary);
+}
+
+.form input[type="text"]:focus, .form input[type="number"]:focus {
+    border-color: var(--primary);
 }
